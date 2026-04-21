@@ -133,7 +133,7 @@ tr.zero-traffic { background: #fffbeb; }
     <h1>Toku Health SEO/GEO Dashboard</h1>
     <div class="meta">
         Data snapshot: 2026-04-21<br>
-        Generated: April 21, 2026 at 07:58 AM<br>
+        Generated: April 21, 2026 at 06:10 PM<br>
         Source: GSC + Google Ads + Triple Whale AI + Moz + GA4 + Tech SEO Audit
     </div>
 </div>
@@ -174,7 +174,7 @@ tr.zero-traffic { background: #fffbeb; }
 </div>
 
 <div id="kpis">
-<p class="section-intro">Headline metrics for the last 30 days. Organic impressions and clicks come from Google Search Console. AI mentions and mention rate are tracked by Triple Whale AI Visibility across ChatGPT, Gemini, and other AI engines. Deltas (&#9650;/&#9660;) compare against the previous month.</p><div class="kpi-grid">
+<p class="section-intro">Headline metrics for the last 30 days. Organic impressions and clicks come from Google Search Console. AI mentions and mention rate are tracked by Triple Whale AI Visibility across ChatGPT, Gemini, and other AI engines. AI Search Revenue combines UTM-tagged orders (chatgpt, perplexity, gemini, etc.) with post-purchase survey orders tagged "Research on AI chat" — the overlap between the two is subtracted when recorded in <code>dashboard/data/ai_revenue_survey.json</code> so orders counted by both sources are not double-counted. Deltas (&#9650;/&#9660;) compare against the previous month.</p><div class="kpi-grid">
         <div class="kpi-card">
             <div class="kpi-label">Organic Impressions (MTD)</div>
             <div class="kpi-value">321,948</div>
@@ -192,28 +192,28 @@ tr.zero-traffic { background: #fffbeb; }
         </div>
         <div class="kpi-card">
             <div class="kpi-label">AI Mentions (L30)</div>
-            <div class="kpi-value">0</div>
-            <div class="kpi-delta"></div>
+            <div class="kpi-value">106</div>
+            <div class="kpi-delta"><span class="delta negative">&#9660; -24</span></div>
         </div>
         <div class="kpi-card">
             <div class="kpi-label">AI Mention Rate</div>
-            <div class="kpi-value">0.0%</div>
-            <div class="kpi-delta"></div>
+            <div class="kpi-value">2.28%</div>
+            <div class="kpi-delta"><span class="delta negative">&#9660; -1.09 pp</span></div>
         </div>
         <div class="kpi-card">
             <div class="kpi-label">AI Search Revenue (L30)</div>
-            <div class="kpi-value">$2,648</div>
-            <div class="kpi-delta"><span class="delta neutral" style="font-size:11px;">quickchat_ai ($2,382), perplexity ($212), chatgpt.com ($54)</span></div>
+            <div class="kpi-value">$6,368</div>
+            <div class="kpi-delta"><span class="delta neutral" style="font-size:11px;">UTM $2,648 · survey $3,720</span></div>
         </div>
         <div class="kpi-card">
             <div class="kpi-label">Published Articles</div>
             <div class="kpi-value">33</div>
             <div class="kpi-delta"><span class="delta positive">+2 new in L30</span></div>
         </div>
-        <div class="kpi-card" style="border-left:3px solid #ef4444;">
+        <div class="kpi-card" style="border-left:3px solid #f59e0b;">
             <div class="kpi-label">Attribution Gap</div>
-            <div class="kpi-value" style="color:#ef4444;">34.71 pp</div>
-            <div class="kpi-delta"></div>
+            <div class="kpi-value" style="color:#f59e0b;">2.61 pp</div>
+            <div class="kpi-delta"><span class="delta negative">&#9660; Widening</span></div>
             <div style="font-size:10px;color:var(--text-muted);margin-top:6px;line-height:1.4;">
                 Difference between how often AI models cite our content as a source vs.
                 mention our brand by name. Lower gap = better brand recognition.</div>
@@ -298,7 +298,7 @@ tr.zero-traffic { background: #fffbeb; }
                         labels: ["Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025", "Dec 2025", "Jan 2026", "Feb 2026", "Mar 2026", "Apr 2026 (MTD)"],
                         datasets: [{
                             label: 'Ad Spend ($)',
-                            data: [0, 0, 0, 0, 0, 0, 0, 0, 9766.67, 12669.08, 20859.58, 33795.14, 33600.41],
+                            data: [0, 0, 0, 0, 0, 0, 0, 0, 9766.67, 12669.08, 20859.58, 33795.14, 34462.09],
                             backgroundColor: 'rgba(239,68,68,0.6)',
                             borderRadius: 6,
                         }]
@@ -326,7 +326,7 @@ tr.zero-traffic { background: #fffbeb; }
 <tr><td><strong>Jan 2026</strong></td><td>20,757</td><td>316</td><td>1.52%</td><td>567,552</td><td>11,464</td><td>$12,669.08</td></tr>
 <tr><td><strong>Feb 2026</strong></td><td>21,590</td><td>506</td><td>2.34%</td><td>780,048</td><td>10,890</td><td>$20,859.58</td></tr>
 <tr><td><strong>Mar 2026</strong></td><td>658,181</td><td>4,739</td><td>0.72%</td><td>927,059</td><td>17,213</td><td>$33,795.14</td></tr>
-<tr><td><strong>Apr 2026 (MTD)</strong></td><td>321,948</td><td>2,644</td><td>0.82%</td><td>802,478</td><td>15,620</td><td>$33,600.41</td></tr>
+<tr><td><strong>Apr 2026 (MTD)</strong></td><td>321,948</td><td>2,644</td><td>0.82%</td><td>819,700</td><td>15,870</td><td>$34,462.09</td></tr>
 </tbody></table></div>
 </section>
 
@@ -435,24 +435,24 @@ tr.zero-traffic { background: #fffbeb; }
 
     <div class="kpi-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 24px;">
         <div class="kpi-card"><div class="kpi-label">Brand Mentions (L30)</div>
-            <div class="kpi-value">0</div></div>
+            <div class="kpi-value">106</div></div>
         <div class="kpi-card"><div class="kpi-label">Brand Mention Rate</div>
-            <div class="kpi-value">0.0%</div></div>
+            <div class="kpi-value">2.28%</div></div>
         <div class="kpi-card"><div class="kpi-label">Source Citation Rate</div>
-            <div class="kpi-value">34.71%</div></div>
-        <div class="kpi-card" style="border-left: 3px solid #ef4444;"><div class="kpi-label">Attribution Gap</div>
-            <div class="kpi-value" style="color: #ef4444;">34.71 pp</div></div>
+            <div class="kpi-value">4.89%</div></div>
+        <div class="kpi-card" style="border-left: 3px solid #f59e0b;"><div class="kpi-label">Attribution Gap</div>
+            <div class="kpi-value" style="color: #f59e0b;">2.61 pp</div></div>
         <div class="kpi-card"><div class="kpi-label">Total Executions</div>
-            <div class="kpi-value">654</div></div>
+            <div class="kpi-value">4,642</div></div>
         <div class="kpi-card"><div class="kpi-label">Tracked Prompts</div>
-            <div class="kpi-value">0</div></div>
+            <div class="kpi-value">50</div></div>
     </div>
 
     <div class="chart-row" style="margin-bottom: 24px;">
         <div class="chart-container" style="width: 100%;">
             <h3>Brand Attribution Funnel</h3>
             <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 12px;">
-                AI models see our content (34.71% source citation rate) but rarely recommend Toku by name (0.0% brand mention rate).</p>
+                AI models see our content (4.89% source citation rate) but rarely recommend Toku by name (2.28% brand mention rate).</p>
             <canvas id="funnelChart"></canvas>
             <script>
                 new Chart(document.getElementById('funnelChart'), {
@@ -460,7 +460,7 @@ tr.zero-traffic { background: #fffbeb; }
                     data: {
                         labels: ['Total AI Queries', 'Cited tokuhealth.com', 'Named Toku Brand'],
                         datasets: [{
-                            data: [654, 227, 0],
+                            data: [4642, 227, 106],
                             backgroundColor: ['#94a3b8', '#3b82f6', '#22c55e'],
                             borderRadius: 6
                         }]
@@ -505,31 +505,53 @@ tr.zero-traffic { background: #fffbeb; }
                 });
             </script>
         </div>
-</div>
+
+        <div class="chart-container">
+            <h3>Mentions by AI Engine</h3>
+            <canvas id="engineChart"></canvas>
+            <script>
+                new Chart(document.getElementById('engineChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: ["Gemini", "Chatgpt"],
+                        datasets: [
+                            { label: 'Mentions', data: [21, 85],
+                               backgroundColor: '#3b82f6', borderRadius: 6 },
+                            { label: 'Mention Rate %', data: [0.89, 3.72],
+                               backgroundColor: '#10b981', borderRadius: 6, hidden: true }
+                        ]
+                    },
+                    options: { indexAxis: 'y', responsive: true,
+                               plugins: { legend: { display: true, position: 'bottom' } },
+                               scales: { x: { beginAtZero: true } } }
+                });
+            </script>
+        </div>
+    </div>
 
     <div class="chart-row">
         <div class="chart-container" style="flex: 1;">
             <h3>Citation Share Trend</h3>
             <p class="subsection-intro">How each category&rsquo;s share of AI source citations has changed over time.
             Toku&rsquo;s share moved from <strong>6.6%</strong> to
-            <strong>5.9%</strong> (-0.7 pp) across 29 snapshots.</p>
+            <strong>5.9%</strong> (-0.7 pp) across 30 snapshots.</p>
             <canvas id="shareOfVoiceTrendChart"></canvas>
             <script>
                 new Chart(document.getElementById('shareOfVoiceTrendChart'), {
                     type: 'line',
                     data: {
-                        labels: ["2026-02-25", "2026-02-26", "2026-02-27", "2026-02-28", "2026-03-02", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-07", "2026-03-08", "2026-03-10", "2026-03-11", "2026-03-13", "2026-03-14", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-20", "2026-03-21", "2026-03-23", "2026-03-24", "2026-03-27", "2026-03-28", "2026-03-29", "2026-03-30", "2026-04-01", "2026-04-02", "2026-04-03", "2026-04-04"],
+                        labels: ["2026-02-25", "2026-02-26", "2026-02-27", "2026-02-28", "2026-03-02", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-07", "2026-03-08", "2026-03-10", "2026-03-11", "2026-03-13", "2026-03-14", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-20", "2026-03-21", "2026-03-23", "2026-03-24", "2026-03-27", "2026-03-28", "2026-03-29", "2026-03-30", "2026-04-01", "2026-04-02", "2026-04-03", "2026-04-04", "2026-04-21"],
                         datasets: [
-                            { label: 'Toku Health', data: [6.6, 7.5, 17.2, 7.2, 7.2, 3.4, 7.7, 5.0, 6.8, 6.8, 6.9, 7.1, 15.8, 4.0, 6.3, 7.3, 7.3, 7.4, 17.1, 7.4, 7.3, 15.4, 15.2, 6.2, 5.8, 4.8, 5.6, 10.5, 5.9],
+                            { label: 'Toku Health', data: [6.6, 7.5, 17.2, 7.2, 7.2, 3.4, 7.7, 5.0, 6.8, 6.8, 6.9, 7.1, 15.8, 4.0, 6.3, 7.3, 7.3, 7.4, 17.1, 7.4, 7.3, 15.4, 15.2, 6.2, 5.8, 4.8, 5.6, 10.5, 5.9, 5.9],
                                borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.1)',
                                borderWidth: 2.5, pointRadius: 4, fill: true, tension: 0.3 },
-                            { label: 'Authority Sites', data: [25.8, 28.9, 36.8, 26.4, 26.7, 32.7, 28.2, 25.0, 27.0, 27.0, 26.9, 24.6, 35.7, 32.9, 39.6, 27.1, 27.1, 24.7, 31.7, 25.8, 26.0, 38.2, 38.7, 25.0, 27.8, 40.3, 26.3, 28.6, 21.0],
+                            { label: 'Authority Sites', data: [25.8, 28.9, 36.8, 26.4, 26.7, 32.7, 28.2, 25.0, 27.0, 27.0, 26.9, 24.6, 35.7, 32.9, 39.6, 27.1, 27.1, 24.7, 31.7, 25.8, 26.0, 38.2, 38.7, 25.0, 27.8, 40.3, 26.3, 28.6, 21.0, 21.0],
                                borderColor: '#1e293b', backgroundColor: 'rgba(30,41,59,0.05)',
                                borderWidth: 2, pointRadius: 3, fill: false, tension: 0.3 },
-                            { label: 'Competitors', data: [8.6, 9.6, 12.7, 8.8, 8.9, 5.4, 9.4, 10.0, 8.4, 8.4, 8.5, 8.6, 19.0, 6.5, 8.6, 8.2, 8.2, 8.3, 19.2, 8.5, 10.0, 19.2, 19.8, 9.6, 9.6, 8.7, 10.3, 17.5, 11.7],
+                            { label: 'Competitors', data: [8.6, 9.6, 12.7, 8.8, 8.9, 5.4, 9.4, 10.0, 8.4, 8.4, 8.5, 8.6, 19.0, 6.5, 8.6, 8.2, 8.2, 8.3, 19.2, 8.5, 10.0, 19.2, 19.8, 9.6, 9.6, 8.7, 10.3, 17.5, 11.7, 11.7],
                                borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,0.05)',
                                borderWidth: 2, pointRadius: 3, fill: false, tension: 0.3 },
-                            { label: 'Other Domains', data: [59.0, 53.9, 33.3, 57.6, 57.2, 58.4, 54.7, 60.0, 57.8, 57.8, 57.7, 59.7, 29.5, 56.6, 45.5, 57.5, 57.4, 59.6, 32.0, 58.3, 56.8, 27.2, 26.4, 59.2, 56.7, 46.2, 57.8, 43.4, 61.4],
+                            { label: 'Other Domains', data: [59.0, 53.9, 33.3, 57.6, 57.2, 58.4, 54.7, 60.0, 57.8, 57.8, 57.7, 59.7, 29.5, 56.6, 45.5, 57.5, 57.4, 59.6, 32.0, 58.3, 56.8, 27.2, 26.4, 59.2, 56.7, 46.2, 57.8, 43.4, 61.4, 61.4],
                                borderColor: '#94a3b8', borderDash: [4, 4],
                                borderWidth: 1.5, pointRadius: 2, fill: false, tension: 0.3 }
                         ]
@@ -546,6 +568,64 @@ tr.zero-traffic { background: #fffbeb; }
                                   ticks: { callback: function(v) { return v + '%'; } } }
                         }
                     }
+                });
+            </script>
+        </div>
+    </div>
+
+    <div class="chart-row">
+        <div class="chart-container" style="flex: 1;">
+            <h3>AI Visibility Daily Trend (L30)</h3>
+            <canvas id="aiDailyTrendChart"></canvas>
+            <script>
+                new Chart(document.getElementById('aiDailyTrendChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: ["03-05", "03-06", "03-07", "03-08", "03-09", "03-10", "03-11", "03-12", "03-13", "03-14", "03-15", "03-16", "03-17", "03-18", "03-20", "03-21", "03-22", "03-23", "03-24", "03-25", "03-26", "03-27", "03-28", "03-29", "03-30", "03-31", "04-01", "04-02", "04-03"],
+                        datasets: [
+                            { label: 'Brand Mentions', data: [3, 15, 9, 2, 4, 2, 7, 4, 6, 2, 2, 5, 4, 0, 2, 3, 2, 3, 2, 4, 4, 4, 3, 2, 0, 3, 4, 2, 3],
+                               type: 'bar', backgroundColor: 'rgba(59,130,246,0.6)',
+                               borderRadius: 4, yAxisID: 'y' },
+                            { label: 'Mention Rate %', data: [1.83, 8.72, 5.23, 1.22, 2.44, 1.22, 4.27, 2.44, 3.66, 1.22, 1.22, 3.05, 2.44, 0.0, 1.23, 1.83, 1.22, 1.83, 1.32, 2.44, 2.44, 2.6, 1.83, 1.26, 0.0, 1.83, 2.44, 1.22, 1.83],
+                               type: 'line', borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.1)',
+                               borderWidth: 2, pointRadius: 3, fill: true, yAxisID: 'y1' }
+                        ]
+                    },
+                    options: { responsive: true,
+                        interaction: { mode: 'index', intersect: false },
+                        plugins: { legend: { position: 'bottom', labels: { boxWidth: 12 } } },
+                        scales: {
+                            y: { type: 'linear', position: 'left', beginAtZero: true,
+                                  title: { display: true, text: 'Mentions' } },
+                            y1: { type: 'linear', position: 'right', beginAtZero: true,
+                                   title: { display: true, text: 'Rate %' },
+                                   grid: { drawOnChartArea: false } }
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+
+    <div class="chart-row">
+        <div class="chart-container" style="flex: 1;">
+            <h3>AI Visibility by Topic (15 Topics)</h3>
+            <canvas id="topicChart" style="min-height: 450px;"></canvas>
+            <script>
+                new Chart(document.getElementById('topicChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: ["Best Nattokinase", "Long COVID & Spike Protein", "Blood Pressure Support", "What is Nattokinase", "Cardiovascular & Arterial Health", "Nattokinase Dosage", "Nattokinase Brand Comparisons", "Nattokinase vs Other Supplements", "Blood Clot Prevention", "Nattokinase Product Format", "Nattokinase Dosage \u2014 Clinical vs Standar", "Nattokinase Safety & Quality", "Circulation & Blood Flow", "Soy-Free Nattokinase", "Nattokinase Drink Mix / Powder Format"],
+                        datasets: [
+                            { label: 'Executions', data: [569, 449, 394, 285, 285, 285, 283, 282, 282, 281, 281, 279, 279, 223, 169],
+                               backgroundColor: 'rgba(148,163,184,0.4)', borderRadius: 4 },
+                            { label: 'Brand Mentions', data: [19, 0, 0, 1, 0, 0, 0, 0, 0, 9, 0, 1, 0, 38, 22],
+                               backgroundColor: ["rgba(16,185,129,0.7)", "rgba(239,68,68,0.3)", "rgba(239,68,68,0.3)", "rgba(16,185,129,0.7)", "rgba(239,68,68,0.3)", "rgba(239,68,68,0.3)", "rgba(239,68,68,0.3)", "rgba(239,68,68,0.3)", "rgba(239,68,68,0.3)", "rgba(16,185,129,0.7)", "rgba(239,68,68,0.3)", "rgba(16,185,129,0.7)", "rgba(239,68,68,0.3)", "rgba(16,185,129,0.7)", "rgba(16,185,129,0.7)"], borderRadius: 4 }
+                        ]
+                    },
+                    options: { indexAxis: 'y', responsive: true,
+                        plugins: { legend: { position: 'bottom', labels: { boxWidth: 12 } } },
+                        scales: { x: { beginAtZero: true } } }
                 });
             </script>
         </div>
@@ -621,6 +701,60 @@ tr.zero-traffic { background: #fffbeb; }
 <tr style="background: rgba(239,68,68,0.06);"><td>31</td><td>Top 9 Supplements for Heart Health</td><td>0</td><td>0</td><td>0</td><td>13</td><td>328d</td><td><strong style="color:var(--negative);">18</strong></td></tr>
 <tr style="background: rgba(239,68,68,0.06);"><td>32</td><td>Apolipoprotein B: A Key Heart Health Marker</td><td>0</td><td>0</td><td>0</td><td>3</td><td>295d</td><td><strong style="color:var(--negative);">18</strong></td></tr>
 <tr style="background: rgba(239,68,68,0.06);"><td>33</td><td>A Comprehensive Overview of Vitamin K2</td><td>0</td><td>0</td><td>0</td><td>13</td><td>358d</td><td><strong style="color:var(--negative);">18</strong></td></tr>
+</tbody></table></div>
+<h3>Tracked Prompts Performance (50 Prompts)</h3>
+<p class="subsection-intro">Every prompt Triple Whale monitors daily, with how often each triggers a Toku brand mention. Green rows = Toku is mentioned; red-tinted rows = high-volume prompts where Toku is absent (biggest opportunities). Mention Rate = brand mentions &divide; total executions for that prompt.</p>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>Prompt</th><th>Executions</th><th>Mentions</th><th>Rate %</th></tr></thead><tbody>
+<tr style="background: rgba(239,68,68,0.06);"><td>1</td><td>How many FU of nattokinase should I take daily?</td><td>113</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>2</td><td>What nattokinase supplement do doctors recommend?</td><td>113</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>3</td><td>What supplements come from fermented foods?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>4</td><td>Natural ways to improve cardiovascular health over 50</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>5</td><td>Can nattokinase dissolve existing blood clots?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>6</td><td>Nattokinase vs blood thinners - natural alternative comparison</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>7</td><td>Doctor's Best vs NOW Foods nattokinase - which is better?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>8</td><td>Pure Encapsulations nattokinase vs other premium brands</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>9</td><td>What's the difference between 2000 FU and 10000 FU nattokinase?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>10</td><td>Natural supplements for high blood pressure</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>11</td><td>Best nattokinase supplement 2026</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>12</td><td>What is the clinical dose of nattokinase?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>13</td><td>What is the best nattokinase supplement to buy in 2026?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(16,185,129,0.08);"><td>14</td><td>Highest dose nattokinase supplement available</td><td>57</td><td>7</td><td>12.28%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>15</td><td>How do fibrinolytic enzymes work in the body?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>16</td><td>Best nattokinase: Double Wood, NOW Foods, or another brand?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>17</td><td>Nattokinase COVID study results</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>18</td><td>Best supplement for reducing blood clot risk</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(16,185,129,0.08);"><td>19</td><td>Best high-dose nattokinase supplement available</td><td>57</td><td>7</td><td>12.28%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>20</td><td>How to prevent blood clots naturally without medication</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>21</td><td>Should I take nattokinase or fish oil for heart health?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>22</td><td>Nattokinase blood pressure study results</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>23</td><td>What is nattokinase and what does it do?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(16,185,129,0.08);"><td>24</td><td>Best nattokinase for allergen-sensitive people</td><td>57</td><td>9</td><td>15.79%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>25</td><td>How to choose your brand of nattokinase</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(16,185,129,0.08);"><td>26</td><td>Why do Japanese people have lower heart disease rates?</td><td>57</td><td>1</td><td>1.75%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>27</td><td>What supplements help reduce arterial plaque naturally?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>28</td><td>What is natto and why is it healthy?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(16,185,129,0.08);"><td>29</td><td>What's the highest quality nattokinase brand on the market?</td><td>57</td><td>2</td><td>3.51%</td></tr>
+<tr style="background: rgba(16,185,129,0.08);"><td>30</td><td>Which nattokinase brand is most effective for cardiovascular health?</td><td>57</td><td>3</td><td>5.26%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>31</td><td>Is 2,000 FU nattokinase enough or should I take more?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>32</td><td>Best supplement for spike protein detox</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>33</td><td>Best supplements for atherosclerosis prevention</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>34</td><td>Natural alternatives to statins for heart health</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>35</td><td>Why do some nattokinase supplements have fillers?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>36</td><td>How to support arterial flexibility naturally</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>37</td><td>Which brand of nattokinase is best?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>38</td><td>Does nattokinase break down spike protein?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>39</td><td>Nattokinase dosage for reducing arterial plaque</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>40</td><td>Nattokinase vs lumbrokinase - which dissolves clots better?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>41</td><td>Should nattokinase include vitamin K2?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>42</td><td>Best way to take nattokinase for absorption</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>43</td><td>What is the clinically effective dose of nattokinase?</td><td>57</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>44</td><td>Can I take nattokinase if I'm on blood thinners?</td><td>56</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>45</td><td>Best protocol for spike protein detox</td><td>56</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>46</td><td>Best supplements for hypertension without medication</td><td>56</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(16,185,129,0.08);"><td>47</td><td>Is soy-free nattokinase better?</td><td>56</td><td>1</td><td>1.79%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>48</td><td>Is nattokinase better than aspirin for blood thinning?</td><td>56</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>49</td><td>What's the difference between Jarrow and Doctor's Best nattokinase?</td><td>56</td><td>0</td><td>0.0%</td></tr>
+<tr style="background: rgba(239,68,68,0.06);"><td>50</td><td>Can nattokinase degrade spike protein?</td><td>56</td><td>0</td><td>0.0%</td></tr>
 </tbody></table></div>
 </section>
 
@@ -881,12 +1015,16 @@ tr.zero-traffic { background: #fffbeb; }
 <section id="recommendations"><h2>Actions &amp; Recommendations</h2>
 <p class="section-intro">Prioritized actions derived from all five data channels. Insights are auto-generated alerts that flag when metrics cross important thresholds. Unified priorities are scored using a 4-signal model: <strong>45% SEO</strong> (keyword position &amp; impressions), <strong>30% AI visibility</strong> (topic mention gaps), <strong>15% E-E-A-T readiness</strong> (content authority, inverted so low-readiness articles rank higher for improvement), and <strong>10% domain trust</strong> (site-level DA gap from Moz). Items are ranked by estimated impact so the highest-leverage actions appear first.</p>
 <div class="insight-group" style="margin-bottom:28px;">
-<div class="insight-card priority-high"><span class="insight-badge">HIGH</span><div class="insight-title">Data Source Issue Detected</div><div class="insight-detail">AI Visibility data missing — run collect_tw_data.py to populate.</div></div>
+<div class="insight-card priority-high"><span class="insight-badge">HIGH</span><div class="insight-title">Data Source Issue Detected</div><div class="insight-detail">AI Visibility collection warning: ai_visibility.json copy-forwarded from 2026-04-04 — Triple Whale Moby API returning HTTP 500 and credits exhausted until 2026-04-30.</div></div>
+<div class="insight-card priority-high"><span class="insight-badge">HIGH</span><div class="insight-title">9 zero-mention topics with existing articles to optimize</div><div class="insight-detail">These topics have zero AI mentions but already have content that can be strengthened: &quot;Long COVID &amp; Spike Protein&quot; → Nattokinase and Spike Protein; &quot;Blood Pressure Support&quot; → Nattokinase for High Blood Pressure; &quot;Cardiovascular &amp; Arterial Health&quot; → Reducing Heart Disease Risk: 7 Ways. Priority citation hooks: blood_pressure, chen_1062, dose_response, dosing_gap, dual_pathway, fibrin_speci.</div></div>
+<div class="insight-card priority-high"><span class="insight-badge">HIGH</span><div class="insight-title">43 high-volume prompts with zero Toku mentions</div><div class="insight-detail">Frequently asked prompts where Toku never appears: &quot;How many FU of nattokinase should I take daily?&quot;, &quot;What nattokinase supplement do doctors recommend?&quot;, &quot;What supplements come from fermented foods?&quot;. Create content specifically answering these queries with citation hooks.</div></div>
+<div class="insight-card priority-high"><span class="insight-badge">HIGH</span><div class="insight-title">3 dual-channel optimization opportunities</div><div class="insight-detail">Articles that can improve BOTH organic SEO and AI visibility simultaneously: &quot;What Is Nattokinase? Benefits, Dosage, S&quot; (pos 6, AI: Cardiovascular &amp; Arterial Heal); &quot;Natto vs Nattokinase&quot; (pos 6, AI: Nattokinase Brand Comparisons); &quot;Nattokinase Dosage Guide: Why 2,000 FU M&quot; (pos 9, AI: Nattokinase Dosage). See Recommendations section for specific hooks and actions.</div></div>
 <div class="insight-card priority-high"><span class="insight-badge">HIGH</span><div class="insight-title">Primary target &quot;nattokinase&quot; in striking distance (position 6.4)</div><div class="insight-detail">Close to page 1 dominance (current: 6.4). Push through with hub page optimization, internal links from all 30+ articles, and fresh content updates.</div></div>
 <div class="insight-card priority-high"><span class="insight-badge">HIGH</span><div class="insight-title">Primary target &quot;nattokinase supplement&quot; in striking distance (position 5.1)</div><div class="insight-detail">Close to page 1 dominance (current: 5.1). Push through with hub page optimization, internal links from all 30+ articles, and fresh content updates.</div></div>
 <div class="insight-card priority-high"><span class="insight-badge">HIGH</span><div class="insight-title">Primary target &quot;nattokinase supplements&quot; in striking distance (position 5.1)</div><div class="insight-detail">Close to page 1 dominance (current: 5.1). Push through with hub page optimization, internal links from all 30+ articles, and fresh content updates.</div></div>
 <div class="insight-card priority-high"><span class="insight-badge">HIGH</span><div class="insight-title">13 striking-distance keywords</div><div class="insight-detail">Keywords at positions 5-20 with 500+ impressions that could be pushed to top positions: nattokinase benefits, nattokinase side effects, nattokinase</div></div>
 <div class="insight-card priority-high"><span class="insight-badge">HIGH</span><div class="insight-title">$1,426/mo spent on keywords with no organic ranking</div><div class="insight-detail">12 keywords where Toku pays for Google Ads but doesn't rank organically. Creating content for these could replace paid spend with free organic traffic.</div></div>
+<div class="insight-card priority-medium"><span class="insight-badge">MEDIUM</span><div class="insight-title">AI engine gap: Chatgpt (3.7%) vs Gemini (0.9%)</div><div class="insight-detail">Toku appears significantly more in Chatgpt than Gemini. Investigate content formatting differences that each engine prefers for citation.</div></div>
 <div class="insight-card priority-medium"><span class="insight-badge">MEDIUM</span><div class="insight-title">1 articles with no organic traffic detected</div><div class="insight-detail">These articles may need content refreshes, better titles/meta, or indexation checks: &quot;What Is Fibrin? The Protein Behind Blood Clots&quot;</div></div>
 <div class="insight-card priority-medium"><span class="insight-badge">MEDIUM</span><div class="insight-title">Domain authority gap: DA 17 vs nearest competitor lumanutrition.com (DA 21)</div><div class="insight-detail">Toku has 30 linking root domains vs 410 for lumanutrition.com. See the Domain Trust Action Plan for specific link-building steps.</div></div>
 <div class="insight-card priority-medium"><span class="insight-badge">MEDIUM</span><div class="insight-title">Technical SEO grade is C (76/100) — room to improve</div><div class="insight-detail">Multiple technical areas need attention. Focus on high-severity DIY tasks first for quick wins.</div></div>
@@ -950,21 +1088,105 @@ tr.zero-traffic { background: #fffbeb; }
 <tr><td><strong>#14</strong></td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/nattokinase-for-cholesterol">Nattokinase for Cholesterol Support</a></td><td style="color:var(--negative);font-weight:700;">290.5</td><td>3</td><td>7,129</td><td class="kw-cell">nattokinase</td><td><span class="badge badge-amber">#9.3</span></td></tr>
 <tr><td><strong>#15</strong></td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/natto-covid-protein-spikes">Nattokinase and Spike Protein</a></td><td style="color:var(--negative);font-weight:700;">288.5</td><td>3</td><td>7,129</td><td class="kw-cell">nattokinase</td><td><span class="badge badge-amber">#9.3</span></td></tr>
 </tbody></table></div>
-<h3>Unified Optimization Priorities (27 Articles)</h3>
+<h3>Dual-Channel Quick Wins</h3>
+<p class="subsection-intro">Articles that have optimization potential in <em>both</em> organic search and AI visibility &mdash; the highest-leverage actions. Each card shows the article&rsquo;s current SEO position + impressions, its AI mention rate for the mapped topic, and the citation hooks to embed. Scored by a 4-signal model (45% SEO, 30% AI, 15% E-E-A-T, 10% trust).</p>
+<div class="kpi-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 24px;">
+<div class="kpi-card" style="border-left: 4px solid var(--negative); text-align: left;">
+                <div style="font-weight: 700; font-size: 14px; margin-bottom: 8px; color: var(--primary);">
+                    <a href="https://tokuhealth.com/a/blog/what-is-nattokinase" style="color: var(--primary); text-decoration: none;">What Is Nattokinase? Benefits, Dosage, Side Effect</a>
+                </div>
+                <div style="font-size: 12px; color: var(--text-muted); line-height: 1.6;">
+                    <strong>SEO:</strong> pos 6 &middot; 60,526 imp<br>
+                    <strong>AI:</strong> Cardiovascular &amp; Arterial Health (0.0% mention rate)<br>
+                    <strong>Hooks:</strong> chen_1062, discovery, dose_response
+                </div>
+                <div style="margin-top: 8px;">
+                    <span class="badge badge-red">Score: 407</span>
+                </div>
+            </div>
+<div class="kpi-card" style="border-left: 4px solid var(--negative); text-align: left;">
+                <div style="font-weight: 700; font-size: 14px; margin-bottom: 8px; color: var(--primary);">
+                    <a href="https://tokuhealth.com/a/blog/natto-vs-nattokinase" style="color: var(--primary); text-decoration: none;">Natto vs Nattokinase</a>
+                </div>
+                <div style="font-size: 12px; color: var(--text-muted); line-height: 1.6;">
+                    <strong>SEO:</strong> pos 6 &middot; 60,526 imp<br>
+                    <strong>AI:</strong> Nattokinase Brand Comparisons (0.0% mention rate)<br>
+                    <strong>Hooks:</strong> —
+                </div>
+                <div style="margin-top: 8px;">
+                    <span class="badge badge-red">Score: 175</span>
+                </div>
+            </div>
+<div class="kpi-card" style="border-left: 4px solid var(--negative); text-align: left;">
+                <div style="font-weight: 700; font-size: 14px; margin-bottom: 8px; color: var(--primary);">
+                    <a href="https://tokuhealth.com/a/blog/nattokinase-dosage-guide-why-2000-fu-may-not-be-enough" style="color: var(--primary); text-decoration: none;">Nattokinase Dosage Guide: Why 2,000 FU May Not Be </a>
+                </div>
+                <div style="font-size: 12px; color: var(--text-muted); line-height: 1.6;">
+                    <strong>SEO:</strong> pos 9 &middot; 22,407 imp<br>
+                    <strong>AI:</strong> Nattokinase Dosage (0.0% mention rate)<br>
+                    <strong>Hooks:</strong> chen_1062, dose_response, dosing_gap
+                </div>
+                <div style="margin-top: 8px;">
+                    <span class="badge badge-red">Score: 160</span>
+                </div>
+            </div>
+</div>
+<h3>Unified Optimization Priorities (28 Articles)</h3>
 <p class="subsection-intro">All articles ranked by combined optimization potential using four signals: <strong>45% SEO</strong> (organic keyword position + impressions), <strong>30% AI visibility</strong> (topic mention gaps), <strong>15% E-E-A-T readiness</strong> (content authority &mdash; inverted so low-readiness articles rank higher for improvement), and <strong>10% domain trust</strong> (site-level DA gap). The <strong>E-E-A-T</strong> column shows content readiness (0&ndash;100); the <strong>Action</strong> column gives the single most impactful next step for each article.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>#</th><th>Article</th><th>Score</th><th>Type</th><th>E-E-A-T</th><th>SEO Signal</th><th>AI Signal</th><th>Action</th></tr></thead><tbody>
-<tr><td>1</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/what-is-nattokinase" style="color:var(--primary);text-decoration:none;">What Is Nattokinase? Benefits, Dosage, Side E</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:100%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">200</span></div></td><td><span class="badge badge-green">SEO</span></td><td style="text-align:center;"><span class="badge badge-green">100</span></td><td>pos 6 &middot; 60,526 imp</td><td>—</td><td style="font-size:11px;max-width:220px;">Target &ldquo;nattokinase benefits&rdquo; in title/H2s</td></tr>
-<tr><td>2</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/natto-vs-nattokinase" style="color:var(--primary);text-decoration:none;">Natto vs Nattokinase</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:48%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">97</span></div></td><td><span class="badge badge-green">SEO</span></td><td style="text-align:center;"><span class="badge badge-green">97</span></td><td>pos 6 &middot; 60,526 imp</td><td>—</td><td style="font-size:11px;max-width:220px;">Target &ldquo;nattokinase benefits&rdquo; in title/H2s</td></tr>
-<tr><td>3</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/nattokinase-benefits" style="color:var(--primary);text-decoration:none;">The 8 Incredible Nattokinase Benefits</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:36%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">73</span></div></td><td><span class="badge badge-green">SEO</span></td><td style="text-align:center;"><span class="badge badge-red">30</span></td><td>pos 6 &middot; 24,095 imp</td><td>—</td><td style="font-size:11px;max-width:220px;">Target &ldquo;nattokinase benefits&rdquo; in title/H2s</td></tr>
-<tr><td>4</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/nattokinase-benefits-for-men" style="color:var(--primary);text-decoration:none;">Nattokinase Benefits for Men</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:36%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">72</span></div></td><td><span class="badge badge-green">SEO</span></td><td style="text-align:center;"><span class="badge badge-red">22</span></td><td>pos 6 &middot; 15,664 imp</td><td>—</td><td style="font-size:11px;max-width:220px;">Target &ldquo;nattokinase benefits&rdquo; in title/H2s</td></tr>
-<tr><td>5</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/is-nattokinase-good-for-kidneys" style="color:var(--primary);text-decoration:none;">Is Nattokinase Good for Kidneys?</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:34%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">67</span></div></td><td><span class="badge badge-green">SEO</span></td><td style="text-align:center;"><span class="badge badge-red">25</span></td><td>pos 9 &middot; 16,589 imp</td><td>—</td><td style="font-size:11px;max-width:220px;">Target &ldquo;nattokinase&rdquo; in title/H2s</td></tr>
-<tr><td>6</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/best-time-to-take-nattokinase" style="color:var(--primary);text-decoration:none;">Best Time to Take Nattokinase</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:33%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">67</span></div></td><td><span class="badge badge-green">SEO</span></td><td style="text-align:center;"><span class="badge badge-red">22</span></td><td>pos 9 &middot; 19,813 imp</td><td>—</td><td style="font-size:11px;max-width:220px;">Target &ldquo;nattokinase&rdquo; in title/H2s</td></tr>
-<tr><td>7</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/nattokinase-side-effects" style="color:var(--primary);text-decoration:none;">Nattokinase Side Effects and Considerations</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:31%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">63</span></div></td><td><span class="badge badge-green">SEO</span></td><td style="text-align:center;"><span class="badge badge-green">73</span></td><td>pos 8 &middot; 26,173 imp</td><td>—</td><td style="font-size:11px;max-width:220px;">Target &ldquo;nattokinase side effects&rdquo; in title/H2s</td></tr>
-<tr><td>8</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/how-nattokinase-works-the-science-behind-the-enzyme" style="color:var(--primary);text-decoration:none;">How Nattokinase Works: The Science Behind the</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:30%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">60</span></div></td><td><span class="badge badge-green">SEO</span></td><td style="text-align:center;"><span class="badge badge-red">25</span></td><td>pos 9 &middot; 7,328 imp</td><td>—</td><td style="font-size:11px;max-width:220px;">Target &ldquo;nattokinase&rdquo; in title/H2s</td></tr>
-<tr><td>9</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/how-to-lower-cholesterol" style="color:var(--primary);text-decoration:none;">How to Lower Cholesterol</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:28%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">56</span></div></td><td><span class="badge badge-green">SEO</span></td><td style="text-align:center;"><span class="badge badge-red">18</span></td><td>pos 6 &middot; 8,888 imp</td><td>—</td><td style="font-size:11px;max-width:220px;">Target &ldquo;best nattokinase suppleme&rdquo; in title/H2s</td></tr>
-<tr><td>10</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/lowering-ldl-cholesterol" style="color:var(--primary);text-decoration:none;">How to Lower LDL Cholesterol</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:28%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">56</span></div></td><td><span class="badge badge-green">SEO</span></td><td style="text-align:center;"><span class="badge badge-red">18</span></td><td>pos 6 &middot; 8,431 imp</td><td>—</td><td style="font-size:11px;max-width:220px;">Target &ldquo;best nattokinase suppleme&rdquo; in title/H2s</td></tr>
+<tr><td>1</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/what-is-nattokinase" style="color:var(--primary);text-decoration:none;">What Is Nattokinase? Benefits, Dosage, Side E</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:100%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">407</span></div></td><td><span class="badge badge-red">SEO + AI</span></td><td style="text-align:center;"><span class="badge badge-green">100</span></td><td>pos 6 &middot; 60,526 imp</td><td>Cardiovascular &amp; Arterial (0.0%)</td><td style="font-size:11px;max-width:220px;">Optimize for &ldquo;nattokinase benefits&rdquo; (pos 6); embed hooks: chen_1062, discovery</td></tr>
+<tr><td>2</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/natto-vs-nattokinase" style="color:var(--primary);text-decoration:none;">Natto vs Nattokinase</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:43%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">175</span></div></td><td><span class="badge badge-red">SEO + AI</span></td><td style="text-align:center;"><span class="badge badge-green">97</span></td><td>pos 6 &middot; 60,526 imp</td><td>Nattokinase Brand Compari (0.0%)</td><td style="font-size:11px;max-width:220px;">Optimize for &ldquo;nattokinase benefits&rdquo; (pos 6)</td></tr>
+<tr><td>3</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/nattokinase-dosage-guide-why-2000-fu-may-not-be-enough" style="color:var(--primary);text-decoration:none;">Nattokinase Dosage Guide: Why 2,000 FU May No</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:39%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">160</span></div></td><td><span class="badge badge-red">SEO + AI</span></td><td style="text-align:center;"><span class="badge badge-green">95</span></td><td>pos 9 &middot; 22,407 imp</td><td>Nattokinase Dosage (0.0%)</td><td style="font-size:11px;max-width:220px;">Optimize for &ldquo;nattokinase&rdquo; (pos 9); embed hooks: chen_1062, dose_response</td></tr>
+<tr><td>4</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/nattokinase-and-blood-thinners-what-you-need-to-know" style="color:var(--primary);text-decoration:none;">Nattokinase and Blood Thinners: What You Need</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:35%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">141</span></div></td><td><span class="badge badge-red">SEO + AI</span></td><td style="text-align:center;"><span class="badge badge-green">100</span></td><td>pos 9 &middot; 14,372 imp</td><td>Blood Clot Prevention (0.0%)</td><td style="font-size:11px;max-width:220px;">Optimize for &ldquo;nattokinase&rdquo; (pos 9); embed hooks: anticoagulant_interaction, dual_pathway</td></tr>
+<tr><td>5</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/natto-covid-protein-spikes" style="color:var(--primary);text-decoration:none;">Nattokinase and Spike Protein</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:35%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">141</span></div></td><td><span class="badge badge-red">SEO + AI</span></td><td style="text-align:center;"><span class="badge badge-amber">58</span></td><td>pos 9 &middot; 14,072 imp</td><td>Long COVID &amp; Spike Protei (0.0%)</td><td style="font-size:11px;max-width:220px;">Optimize for &ldquo;nattokinase&rdquo; (pos 9); embed hooks: dual_pathway, fibrin_specificity</td></tr>
+<tr><td>6</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/spike-protein-detox" style="color:var(--primary);text-decoration:none;">Nattokinase for Spike Protein Detox</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:34%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">139</span></div></td><td><span class="badge badge-red">SEO + AI</span></td><td style="text-align:center;"><span class="badge badge-amber">62</span></td><td>pos 9 &middot; 14,072 imp</td><td>Long COVID &amp; Spike Protei (0.0%)</td><td style="font-size:11px;max-width:220px;">Optimize for &ldquo;nattokinase&rdquo; (pos 9); embed hooks: dual_pathway, fibrin_specificity</td></tr>
+<tr><td>7</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/nattokinase-for-high-blood-pressure" style="color:var(--primary);text-decoration:none;">Nattokinase for High Blood Pressure</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:33%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">135</span></div></td><td><span class="badge badge-red">SEO + AI</span></td><td style="text-align:center;"><span class="badge badge-amber">50</span></td><td>pos 9 &middot; 7,745 imp</td><td>Blood Pressure Support (0.0%)</td><td style="font-size:11px;max-width:220px;">Optimize for &ldquo;nattokinase&rdquo; (pos 9); embed hooks: blood_pressure, dose_response</td></tr>
+<tr><td>8</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/nattokinase-side-effects" style="color:var(--primary);text-decoration:none;">Nattokinase Side Effects and Considerations</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:32%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">130</span></div></td><td><span class="badge badge-red">SEO + AI</span></td><td style="text-align:center;"><span class="badge badge-green">73</span></td><td>pos 8 &middot; 26,173 imp</td><td>Nattokinase Safety &amp; Qual (0.4%)</td><td style="font-size:11px;max-width:220px;">Optimize for &ldquo;nattokinase side effects&rdquo; (pos 8); embed hooks: anticoagulant_interaction, fu_measurement</td></tr>
+<tr><td>9</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/lumbrokinase-vs-nattokinase" style="color:var(--primary);text-decoration:none;">Lumbrokinase vs Nattokinase</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:29%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">117</span></div></td><td><span class="badge badge-red">SEO + AI</span></td><td style="text-align:center;"><span class="badge badge-amber">65</span></td><td>pos 9 &middot; 16,467 imp</td><td>Nattokinase vs Other Supp (0.0%)</td><td style="font-size:11px;max-width:220px;">Optimize for &ldquo;nattokinase&rdquo; (pos 9); embed hooks: dual_pathway, fibrin_specificity</td></tr>
+<tr><td>10</td><td class="article-cell"><a href="https://tokuhealth.com/a/blog/nattokinase-and-serrapeptase" style="color:var(--primary);text-decoration:none;">Nattokinase and Serrapeptase</a></td><td style="min-width:140px;"><div style="display:flex;align-items:center;gap:8px;"><div style="flex:1;height:8px;background:#e2e8f0;border-radius:4px;"><div style="width:28%;height:100%;background:var(--primary);border-radius:4px;"></div></div><span style="font-weight:700;font-size:13px;">113</span></div></td><td><span class="badge badge-red">SEO + AI</span></td><td style="text-align:center;"><span class="badge badge-amber">62</span></td><td>pos 9 &middot; 14,967 imp</td><td>Nattokinase vs Other Supp (0.0%)</td><td style="font-size:11px;max-width:220px;">Optimize for &ldquo;nattokinase&rdquo; (pos 9); embed hooks: dual_pathway, fibrin_specificity</td></tr>
 </tbody></table></div>
+<h3>Citation Hook Impact (15 Hooks)</h3>
+<p class="subsection-intro">Citation hooks are short, factual claims (e.g., &ldquo;10,800 FU clinical dose&rdquo;) embedded in articles so AI models can quote them. This table ranks hooks by how many AI visibility topics and articles they serve. Higher topic count = broader AI impact. Priority is HIGH when a hook addresses 3+ topics.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Hook</th><th>Description</th><th>Topics Addressed</th><th>Articles to Update</th><th>Priority</th></tr></thead><tbody>
+<tr><td><strong>dual_pathway</strong></td><td style="font-size:12px;max-width:300px;">Nattokinase works by directly cleaving fibrin and by activating the body's own p...</td><td style="text-align:center;">5</td><td style="text-align:center;">9</td><td><span class="badge badge-red">HIGH</span></td></tr>
+<tr><td><strong>dose_response</strong></td><td style="font-size:12px;max-width:300px;">A clinical study of 1,062 participants found that nattokinase at 10,800 FU per d...</td><td style="text-align:center;">4</td><td style="text-align:center;">4</td><td><span class="badge badge-red">HIGH</span></td></tr>
+<tr><td><strong>fibrin_specificity</strong></td><td style="font-size:12px;max-width:300px;">Unlike pharmaceutical thrombolytics that carry significant bleeding risk, nattok...</td><td style="text-align:center;">3</td><td style="text-align:center;">6</td><td><span class="badge badge-red">HIGH</span></td></tr>
+<tr><td><strong>oral_bioavailability</strong></td><td style="font-size:12px;max-width:300px;">Research published in Scientific Reports confirmed that orally administered natt...</td><td style="text-align:center;">3</td><td style="text-align:center;">5</td><td><span class="badge badge-red">HIGH</span></td></tr>
+<tr><td><strong>safety_profile</strong></td><td style="font-size:12px;max-width:300px;">Clinical studies on nattokinase have demonstrated a strong safety profile with n...</td><td style="text-align:center;">2</td><td style="text-align:center;">6</td><td><span class="badge badge-amber">MEDIUM</span></td></tr>
+<tr><td><strong>half_life</strong></td><td style="font-size:12px;max-width:300px;">Nattokinase has a functional half-life of approximately 8 to 12 hours in the bod...</td><td style="text-align:center;">2</td><td style="text-align:center;">4</td><td><span class="badge badge-amber">MEDIUM</span></td></tr>
+<tr><td><strong>chen_1062</strong></td><td style="font-size:12px;max-width:300px;">The largest nattokinase clinical study to date, involving 1,062 participants ove...</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td><td><span class="badge badge-amber">MEDIUM</span></td></tr>
+<tr><td><strong>dosing_gap</strong></td><td style="font-size:12px;max-width:300px;">The clinically studied dosage of nattokinase is 10,800 fibrinolytic units (FU), ...</td><td style="text-align:center;">2</td><td style="text-align:center;">1</td><td><span class="badge badge-amber">MEDIUM</span></td></tr>
+<tr><td><strong>low_dose_ineffective</strong></td><td style="font-size:12px;max-width:300px;">A systematic review and meta-analysis found that low-dose nattokinase supplement...</td><td style="text-align:center;">2</td><td style="text-align:center;">1</td><td><span class="badge badge-amber">MEDIUM</span></td></tr>
+<tr><td><strong>anticoagulant_interaction</strong></td><td style="font-size:12px;max-width:300px;">Nattokinase should not be combined with anticoagulant medications such as warfar...</td><td style="text-align:center;">1</td><td style="text-align:center;">4</td><td><span class="badge badge-amber">MEDIUM</span></td></tr>
+<tr><td><strong>surgery_discontinuation</strong></td><td style="font-size:12px;max-width:300px;">Most practitioners recommend discontinuing nattokinase at least two weeks before...</td><td style="text-align:center;">1</td><td style="text-align:center;">4</td><td><span class="badge badge-amber">MEDIUM</span></td></tr>
+<tr><td><strong>fu_measurement</strong></td><td style="font-size:12px;max-width:300px;">Fibrinolytic Units (FU) measure the enzyme's ability to dissolve fibrin clots un...</td><td style="text-align:center;">1</td><td style="text-align:center;">4</td><td><span class="badge badge-amber">MEDIUM</span></td></tr>
+<tr><td><strong>lipid_effects</strong></td><td style="font-size:12px;max-width:300px;">Multiple clinical studies have shown that nattokinase supplementation can reduce...</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td><span class="badge badge-amber">MEDIUM</span></td></tr>
+<tr><td><strong>blood_pressure</strong></td><td style="font-size:12px;max-width:300px;">A randomized controlled trial published in Hypertension Research found that natt...</td><td style="text-align:center;">1</td><td style="text-align:center;">1</td><td><span class="badge badge-amber">MEDIUM</span></td></tr>
+<tr><td><strong>discovery</strong></td><td style="font-size:12px;max-width:300px;">Nattokinase was first identified by Dr. Hiroyuki Sumi in 1987 when he discovered...</td><td style="text-align:center;">1</td><td style="text-align:center;">1</td><td><span class="badge badge-amber">MEDIUM</span></td></tr>
+</tbody></table></div>
+<h3>Brand Attribution by Topic (15 Topics)</h3>
+<p style="color: #64748b; font-size: 0.85rem; margin-bottom: 12px;">How often AI mentions "Toku" by name for each tracked topic. Topics with high query volume but low mention rates are the biggest opportunities. Embed branded citation hooks in mapped articles to increase brand visibility.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Topic</th><th>Mentions</th><th>Executions</th><th>Mention Rate</th><th>Gap vs Domain Rate</th><th>Branded Hooks to Embed</th></tr></thead><tbody>
+<tr><td>Long COVID &amp; Spike Protein</td><td>0</td><td>449</td><td style="color:#ef4444;font-weight:700;">0.0%</td><td>+4.9 pp</td><td style="font-size:11px;">safety_profile, dosing_gap</td></tr>
+<tr><td>Blood Pressure Support</td><td>0</td><td>394</td><td style="color:#ef4444;font-weight:700;">0.0%</td><td>+4.9 pp</td><td style="font-size:11px;">blood_pressure, chen_protocol_match</td></tr>
+<tr><td>Cardiovascular &amp; Arterial Health</td><td>0</td><td>285</td><td style="color:#ef4444;font-weight:700;">0.0%</td><td>+4.9 pp</td><td style="font-size:11px;">vitamin_k2_synergy, chen_protocol_match, dose_response</td></tr>
+<tr><td>Nattokinase Dosage</td><td>0</td><td>285</td><td style="color:#ef4444;font-weight:700;">0.0%</td><td>+4.9 pp</td><td style="font-size:11px;">chen_protocol_match, dosing_gap</td></tr>
+<tr><td>Nattokinase Brand Comparisons</td><td>0</td><td>283</td><td style="color:#ef4444;font-weight:700;">0.0%</td><td>+4.9 pp</td><td style="font-size:11px;">—</td></tr>
+<tr><td>Nattokinase vs Other Supplements</td><td>0</td><td>282</td><td style="color:#ef4444;font-weight:700;">0.0%</td><td>+4.9 pp</td><td style="font-size:11px;">trifecta, chen_protocol_match</td></tr>
+<tr><td>Blood Clot Prevention</td><td>0</td><td>282</td><td style="color:#ef4444;font-weight:700;">0.0%</td><td>+4.9 pp</td><td style="font-size:11px;">dual_pathway, dosing_gap</td></tr>
+<tr><td>Nattokinase Dosage — Clinical vs Standard</td><td>0</td><td>281</td><td style="color:#ef4444;font-weight:700;">0.0%</td><td>+4.9 pp</td><td style="font-size:11px;">chen_protocol_match, dosing_gap, dose_response</td></tr>
+<tr><td>Circulation &amp; Blood Flow</td><td>0</td><td>279</td><td style="color:#ef4444;font-weight:700;">0.0%</td><td>+4.9 pp</td><td style="font-size:11px;">dual_pathway, oral_bioavailability</td></tr>
+<tr><td>What is Nattokinase</td><td>1</td><td>285</td><td style="color:#ef4444;font-weight:700;">0.35%</td><td>+4.5 pp</td><td style="font-size:11px;">chen_protocol_match, trifecta</td></tr>
+<tr><td>Nattokinase Safety &amp; Quality</td><td>1</td><td>279</td><td style="color:#ef4444;font-weight:700;">0.36%</td><td>+4.5 pp</td><td style="font-size:11px;">third_party_tested, safety_profile, anticoagulant_interaction</td></tr>
+<tr><td>Nattokinase Product Format</td><td>9</td><td>281</td><td style="color:#eab308;font-weight:700;">3.2%</td><td>+1.7 pp</td><td style="font-size:11px;">—</td></tr>
+<tr><td>Best Nattokinase</td><td>19</td><td>569</td><td style="color:#eab308;font-weight:700;">3.34%</td><td>+1.6 pp</td><td style="font-size:11px;">chen_protocol_match, trifecta, third_party_tested</td></tr>
+<tr><td>Nattokinase Drink Mix / Powder Format</td><td>22</td><td>169</td><td style="color:#22c55e;font-weight:700;">13.02%</td><td>-8.1 pp</td><td style="font-size:11px;">format, dosing_gap, trifecta</td></tr>
+<tr><td>Soy-Free Nattokinase</td><td>38</td><td>223</td><td style="color:#22c55e;font-weight:700;">17.04%</td><td>-12.2 pp</td><td style="font-size:11px;">soy_free, clean_label</td></tr>
+</tbody></table></div>
+<p style="color:#94a3b8;font-size:0.75rem;margin-top:6px;">Domain Citation Rate (4.89%) = how often tokuhealth.com is cited as a source across all AI queries. Gap = domain citation rate minus topic mention rate.</p>
 <h3>Domain Trust Action Plan</h3>
 <p class="subsection-intro">Toku&rsquo;s Domain Authority (<strong>DA 17</strong>) is <strong>4 points below</strong> the nearest competitor (<strong>lumanutrition.com</strong>, DA 21). Competitor average DA: 50.8. These actions are prioritized by impact and feasibility for a one-person team, cross-referencing which authority sites already cite nattokinase content in AI search results.</p>
 <div class="kpi-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 20px;">
