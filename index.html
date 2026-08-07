@@ -133,7 +133,7 @@ tr.zero-traffic { background: #fffbeb; }
     <h1>Toku Health SEO/GEO Dashboard</h1>
     <div class="meta">
         Data snapshot: 2026-08-07<br>
-        Generated: August 07, 2026 at 06:07 PM<br>
+        Generated: August 07, 2026 at 06:24 PM<br>
         Source: GSC + Google Ads + Triple Whale AI + Moz + GA4 + Tech SEO Audit
     </div>
 </div>
@@ -298,7 +298,7 @@ tr.zero-traffic { background: #fffbeb; }
                         labels: ["Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025", "Dec 2025", "Jan 2026", "Feb 2026", "Mar 2026", "Apr 2026", "May 2026", "Jun 2026", "Jul 2026", "Aug 2026 (MTD)"],
                         datasets: [{
                             label: 'Ad Spend ($)',
-                            data: [0, 0, 0, 0, 0, 0, 0, 0, 9766.67, 12669.08, 20859.58, 41214.81, 48730.07, 44572.34, 30650.02, 23877.04, 6862.5],
+                            data: [0, 0, 0, 0, 0, 0, 0, 0, 9766.67, 12669.08, 20859.58, 41214.81, 48730.07, 44572.34, 30650.02, 23877.04, 6860.98],
                             backgroundColor: 'rgba(239,68,68,0.6)',
                             borderRadius: 6,
                         }]
@@ -330,7 +330,7 @@ tr.zero-traffic { background: #fffbeb; }
 <tr><td><strong>May 2026</strong></td><td>413,868</td><td>4,440</td><td>1.07%</td><td>727,688</td><td>17,007</td><td>$44,572.34</td></tr>
 <tr><td><strong>Jun 2026</strong></td><td>304,371</td><td>3,710</td><td>1.22%</td><td>558,589</td><td>9,492</td><td>$30,650.02</td></tr>
 <tr><td><strong>Jul 2026</strong></td><td>278,264</td><td>4,023</td><td>1.45%</td><td>866,336</td><td>13,433</td><td>$23,877.04</td></tr>
-<tr><td><strong>Aug 2026 (MTD)</strong></td><td>35,580</td><td>443</td><td>1.25%</td><td>188,759</td><td>2,324</td><td>$6,862.50</td></tr>
+<tr><td><strong>Aug 2026 (MTD)</strong></td><td>35,580</td><td>443</td><td>1.25%</td><td>188,795</td><td>2,324</td><td>$6,860.98</td></tr>
 </tbody></table></div>
 </section>
 
@@ -613,6 +613,50 @@ tr.zero-traffic { background: #fffbeb; }
 
     <div class="chart-row">
         <div class="chart-container" style="flex: 1;">
+            <h3>AI Visibility Month over Month</h3>
+            <p class="subsection-intro">Brand mentions and mention rate aggregated by calendar month across the
+            full collection history. Mention rate (mentions &divide; prompt executions) is the comparable metric —
+            months marked with a day count have partial coverage, so their raw mention totals run low but their
+            rate is still apples-to-apples.</p>
+            <canvas id="aiMonthlyChart"></canvas>
+            <script>
+                const aiMonthlyExecs = [10, 3568, 4806, 4916, 5038, 3667, 5215, 328];
+                new Chart(document.getElementById('aiMonthlyChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: ["Jan 2026 (3d)", "Feb 2026", "Mar 2026", "Apr 2026", "May 2026", "Jun 2026 (23d)", "Jul 2026", "Aug 2026 (2d)"],
+                        datasets: [
+                            { label: 'Brand Mentions', data: [0, 44, 105, 51, 95, 141, 117, 10],
+                               type: 'bar', backgroundColor: 'rgba(59,130,246,0.6)',
+                               borderRadius: 4, yAxisID: 'y' },
+                            { label: 'Mention Rate %', data: [0.0, 1.23, 2.18, 1.04, 1.89, 3.85, 2.24, 3.05],
+                               type: 'line', borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.1)',
+                               borderWidth: 2.5, pointRadius: 4, tension: 0.2, fill: false, yAxisID: 'y1' }
+                        ]
+                    },
+                    options: { responsive: true,
+                        interaction: { mode: 'index', intersect: false },
+                        plugins: {
+                            legend: { position: 'bottom', labels: { boxWidth: 12 } },
+                            tooltip: { callbacks: { afterBody: function(items) {
+                                return 'Prompt executions: ' + aiMonthlyExecs[items[0].dataIndex].toLocaleString();
+                            } } }
+                        },
+                        scales: {
+                            y: { type: 'linear', position: 'left', beginAtZero: true,
+                                  title: { display: true, text: 'Mentions' } },
+                            y1: { type: 'linear', position: 'right', beginAtZero: true,
+                                   title: { display: true, text: 'Rate %' },
+                                   grid: { drawOnChartArea: false } }
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+
+    <div class="chart-row">
+        <div class="chart-container" style="flex: 1;">
             <h3>AI Visibility by Topic (15 Topics)</h3>
             <canvas id="topicChart" style="min-height: 450px;"></canvas>
             <script>
@@ -648,6 +692,46 @@ tr.zero-traffic { background: #fffbeb; }
 </tbody></table></div>
 <h3>Domain Authority Comparison</h3>
 <p class="subsection-intro">Domain Authority (DA) from Moz measures overall link-based authority on a 0&ndash;100 scale. Higher DA correlates with better organic rankings and, crucially, higher likelihood of being cited by AI models as a trusted source. Toku currently has <strong>DA 21</strong> with <strong>56 linking root domains</strong> (+6 vs last month). <span style="color:var(--text-muted);font-size:12px;">Data: 2026-08-01</span></p>
+
+    <div class="chart-row">
+        <div class="chart-container" style="flex: 1;">
+            <h3>Authority Progress (Month over Month)</h3>
+            <p class="subsection-intro">Toku's Domain Authority, Page Authority, and linking root domains
+            from each monthly Moz collection. Linking domains are the input; DA/PA are the output.</p>
+            <canvas id="mozHistoryChart"></canvas>
+            <script>
+                new Chart(document.getElementById('mozHistoryChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: ["Feb 2026", "Mar 2026", "Apr 2026", "May 2026", "Jun 2026", "Jul 2026", "Aug 2026"],
+                        datasets: [
+                            { label: 'Linking Root Domains', data: [24, 25, 30, 38, 44, 50, 56],
+                               type: 'bar', backgroundColor: 'rgba(148,163,184,0.45)',
+                               borderRadius: 4, yAxisID: 'y1' },
+                            { label: 'Domain Authority', data: [16, 15, 17, 19, 19, 20, 21],
+                               type: 'line', borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.1)',
+                               borderWidth: 2.5, pointRadius: 4, tension: 0.2, yAxisID: 'y' },
+                            { label: 'Page Authority', data: [20, 20, 21, 22, 23, 23, 24],
+                               type: 'line', borderColor: '#8b5cf6', backgroundColor: 'rgba(139,92,246,0.1)',
+                               borderWidth: 2.5, pointRadius: 4, tension: 0.2, yAxisID: 'y' }
+                        ]
+                    },
+                    options: { responsive: true,
+                        interaction: { mode: 'index', intersect: false },
+                        plugins: { legend: { position: 'bottom', labels: { boxWidth: 12 } } },
+                        scales: {
+                            y: { type: 'linear', position: 'left', beginAtZero: true,
+                                  suggestedMax: 29,
+                                  title: { display: true, text: 'Authority (0-100)' } },
+                            y1: { type: 'linear', position: 'right', beginAtZero: true,
+                                   title: { display: true, text: 'Linking Root Domains' },
+                                   grid: { drawOnChartArea: false } }
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
 <div class="table-wrap"><table><thead><tr><th>#</th><th>Domain</th><th>Type</th><th>Domain Authority</th><th>Page Authority</th><th>Linking Domains</th><th>External Links</th><th>DA Gap to Toku</th></tr></thead><tbody>
 <tr><td>1</td><td>amazon.com</td><td><span class="badge badge-blue">Marketplace</span></td><td><strong>95</strong></td><td>90</td><td>5,585,968</td><td>7,019,965,968</td><td><span style="color:var(--negative);">+74 ahead</span></td></tr>
 <tr><td>2</td><td>nih.gov</td><td><span class="badge badge-amber">Authority</span></td><td><strong>95</strong></td><td>77</td><td>1,832,477</td><td>3,135,405,542</td><td><span style="color:var(--negative);">+74 ahead</span></td></tr>
@@ -779,33 +863,33 @@ tr.zero-traffic { background: #fffbeb; }
 <p class="section-intro">Automated weekly audit of technical SEO and GEO (Generative Engine Optimization) readiness. Checks schema markup, LLM crawlability, content structure, meta tags, page speed, internal linking, and content freshness. Each issue is classified as <span class="badge badge-green">DIY</span> (you can fix it yourself) or <span class="badge badge-orange">DEV</span> (needs a developer).</p>
 
     <div class="kpi-grid" style="grid-template-columns: 1fr 1fr 1fr 1fr; margin-bottom: 24px;">
-        <div class="kpi-card" style="border-left: 4px solid #f59e0b;">
+        <div class="kpi-card" style="border-left: 4px solid #3b82f6;">
             <div class="kpi-label">Site Score</div>
-            <div class="kpi-value" style="color: #f59e0b;">76/100</div>
-            <div class="kpi-delta" style="font-size:18px; font-weight:800; color:#f59e0b;">Grade: C</div>
+            <div class="kpi-value" style="color: #3b82f6;">81/100</div>
+            <div class="kpi-delta" style="font-size:18px; font-weight:800; color:#3b82f6;">Grade: B</div>
         </div>
         <div class="kpi-card">
             <div class="kpi-label">Pages Audited</div>
-            <div class="kpi-value">53</div>
+            <div class="kpi-value">83</div>
         </div>
         <div class="kpi-card">
             <div class="kpi-label">DIY Tasks</div>
-            <div class="kpi-value" style="color: #059669;">38</div>
+            <div class="kpi-value" style="color: #059669;">47</div>
         </div>
         <div class="kpi-card">
             <div class="kpi-label">DEV Tasks</div>
-            <div class="kpi-value" style="color: #f97316;">2</div>
+            <div class="kpi-value" style="color: #f97316;">0</div>
         </div>
     </div>
 <h3>Category Scores</h3>
 <div style="display:grid; grid-template-columns:1fr; gap:8px; margin-bottom:24px;">
-<div style="display:flex; align-items:center; gap:12px;"><div style="width:180px; font-size:13px; font-weight:600; flex-shrink:0;">Schema &amp; Structured Data</div><div style="flex:1; background:#f1f5f9; border-radius:4px; height:24px; position:relative;"><div style="width:68%; background:#f59e0b; height:100%; border-radius:4px; transition:width 0.3s;"></div></div><div style="width:50px; text-align:right; font-weight:700; color:#f59e0b;">68</div><div style="width:80px; font-size:11px; color:var(--text-muted);">25% weight</div></div>
+<div style="display:flex; align-items:center; gap:12px;"><div style="width:180px; font-size:13px; font-weight:600; flex-shrink:0;">Schema &amp; Structured Data</div><div style="flex:1; background:#f1f5f9; border-radius:4px; height:24px; position:relative;"><div style="width:83%; background:#059669; height:100%; border-radius:4px; transition:width 0.3s;"></div></div><div style="width:50px; text-align:right; font-weight:700; color:#059669;">83</div><div style="width:80px; font-size:11px; color:var(--text-muted);">25% weight</div></div>
 <div style="display:flex; align-items:center; gap:12px;"><div style="width:180px; font-size:13px; font-weight:600; flex-shrink:0;">LLM Crawlability</div><div style="flex:1; background:#f1f5f9; border-radius:4px; height:24px; position:relative;"><div style="width:100%; background:#059669; height:100%; border-radius:4px; transition:width 0.3s;"></div></div><div style="width:50px; text-align:right; font-weight:700; color:#059669;">100</div><div style="width:80px; font-size:11px; color:var(--text-muted);">20% weight</div></div>
-<div style="display:flex; align-items:center; gap:12px;"><div style="width:180px; font-size:13px; font-weight:600; flex-shrink:0;">Content Structure</div><div style="flex:1; background:#f1f5f9; border-radius:4px; height:24px; position:relative;"><div style="width:54%; background:#dc2626; height:100%; border-radius:4px; transition:width 0.3s;"></div></div><div style="width:50px; text-align:right; font-weight:700; color:#dc2626;">54</div><div style="width:80px; font-size:11px; color:var(--text-muted);">15% weight</div></div>
-<div style="display:flex; align-items:center; gap:12px;"><div style="width:180px; font-size:13px; font-weight:600; flex-shrink:0;">Meta &amp; Indexability</div><div style="flex:1; background:#f1f5f9; border-radius:4px; height:24px; position:relative;"><div style="width:90%; background:#059669; height:100%; border-radius:4px; transition:width 0.3s;"></div></div><div style="width:50px; text-align:right; font-weight:700; color:#059669;">90</div><div style="width:80px; font-size:11px; color:var(--text-muted);">15% weight</div></div>
-<div style="display:flex; align-items:center; gap:12px;"><div style="width:180px; font-size:13px; font-weight:600; flex-shrink:0;">Page Speed</div><div style="flex:1; background:#f1f5f9; border-radius:4px; height:24px; position:relative;"><div style="width:50%; background:#dc2626; height:100%; border-radius:4px; transition:width 0.3s;"></div></div><div style="width:50px; text-align:right; font-weight:700; color:#dc2626;">50</div><div style="width:80px; font-size:11px; color:var(--text-muted);">10% weight</div></div>
-<div style="display:flex; align-items:center; gap:12px;"><div style="width:180px; font-size:13px; font-weight:600; flex-shrink:0;">Sitemap &amp; Linking</div><div style="flex:1; background:#f1f5f9; border-radius:4px; height:24px; position:relative;"><div style="width:88%; background:#059669; height:100%; border-radius:4px; transition:width 0.3s;"></div></div><div style="width:50px; text-align:right; font-weight:700; color:#059669;">88</div><div style="width:80px; font-size:11px; color:var(--text-muted);">10% weight</div></div>
-<div style="display:flex; align-items:center; gap:12px;"><div style="width:180px; font-size:13px; font-weight:600; flex-shrink:0;">Content Freshness</div><div style="flex:1; background:#f1f5f9; border-radius:4px; height:24px; position:relative;"><div style="width:75%; background:#f59e0b; height:100%; border-radius:4px; transition:width 0.3s;"></div></div><div style="width:50px; text-align:right; font-weight:700; color:#f59e0b;">75</div><div style="width:80px; font-size:11px; color:var(--text-muted);">5% weight</div></div>
+<div style="display:flex; align-items:center; gap:12px;"><div style="width:180px; font-size:13px; font-weight:600; flex-shrink:0;">Content Structure</div><div style="flex:1; background:#f1f5f9; border-radius:4px; height:24px; position:relative;"><div style="width:46%; background:#dc2626; height:100%; border-radius:4px; transition:width 0.3s;"></div></div><div style="width:50px; text-align:right; font-weight:700; color:#dc2626;">46</div><div style="width:80px; font-size:11px; color:var(--text-muted);">15% weight</div></div>
+<div style="display:flex; align-items:center; gap:12px;"><div style="width:180px; font-size:13px; font-weight:600; flex-shrink:0;">Meta &amp; Indexability</div><div style="flex:1; background:#f1f5f9; border-radius:4px; height:24px; position:relative;"><div style="width:89%; background:#059669; height:100%; border-radius:4px; transition:width 0.3s;"></div></div><div style="width:50px; text-align:right; font-weight:700; color:#059669;">89</div><div style="width:80px; font-size:11px; color:var(--text-muted);">15% weight</div></div>
+<div style="display:flex; align-items:center; gap:12px;"><div style="width:180px; font-size:13px; font-weight:600; flex-shrink:0;">Page Speed</div><div style="flex:1; background:#f1f5f9; border-radius:4px; height:24px; position:relative;"><div style="position:absolute; left:8px; top:4px; font-size:11px; color:var(--text-muted);">No data — excluded from site score (add GOOGLE_PSI_API_KEY to enable)</div></div><div style="width:50px; text-align:right; font-weight:700; color:#94a3b8;">&mdash;</div><div style="width:80px; font-size:11px; color:var(--text-muted);">excluded</div></div>
+<div style="display:flex; align-items:center; gap:12px;"><div style="width:180px; font-size:13px; font-weight:600; flex-shrink:0;">Sitemap &amp; Linking</div><div style="flex:1; background:#f1f5f9; border-radius:4px; height:24px; position:relative;"><div style="width:82%; background:#059669; height:100%; border-radius:4px; transition:width 0.3s;"></div></div><div style="width:50px; text-align:right; font-weight:700; color:#059669;">82</div><div style="width:80px; font-size:11px; color:var(--text-muted);">10% weight</div></div>
+<div style="display:flex; align-items:center; gap:12px;"><div style="width:180px; font-size:13px; font-weight:600; flex-shrink:0;">Content Freshness</div><div style="flex:1; background:#f1f5f9; border-radius:4px; height:24px; position:relative;"><div style="width:72%; background:#f59e0b; height:100%; border-radius:4px; transition:width 0.3s;"></div></div><div style="width:50px; text-align:right; font-weight:700; color:#f59e0b;">72</div><div style="width:80px; font-size:11px; color:var(--text-muted);">5% weight</div></div>
 </div>
 <h3>LLM Crawlability</h3>
 <p class="subsection-intro">Can AI bots access your site? Green = allowed, Red = blocked.</p>
@@ -828,6 +912,18 @@ tr.zero-traffic { background: #fffbeb; }
 <th style="text-align:center;">BreadcrumbList</th>
 <th style="text-align:center;">Speakable</th>
 </tr></thead><tbody>
+<tr><td class="kw-cell" title="https://tokuhealth.com/a/blog/nattokinase-brain-health-amyloid-plaques"><a href="https://tokuhealth.com/a/blog/nattokinase-brain-health-amyloid-plaques" target="_blank" style="color:var(--accent);text-decoration:none;">nattokinase-brain-health-amyloid-plaques</a></td>
+<td style="text-align:center;">&#9989;</td>
+<td style="text-align:center;">&#9989;</td>
+<td style="text-align:center;">&#9989;</td>
+<td style="text-align:center;">&#10060;</td>
+</tr>
+<tr><td class="kw-cell" title="https://tokuhealth.com/a/blog/early-stage-blood-clot-symptoms"><a href="https://tokuhealth.com/a/blog/early-stage-blood-clot-symptoms" target="_blank" style="color:var(--accent);text-decoration:none;">early-stage-blood-clot-symptoms</a></td>
+<td style="text-align:center;">&#9989;</td>
+<td style="text-align:center;">&#9989;</td>
+<td style="text-align:center;">&#9989;</td>
+<td style="text-align:center;">&#10060;</td>
+</tr>
 <tr><td class="kw-cell" title="https://tokuhealth.com/a/blog/poor-circulation-symptoms"><a href="https://tokuhealth.com/a/blog/poor-circulation-symptoms" target="_blank" style="color:var(--accent);text-decoration:none;">poor-circulation-symptoms</a></td>
 <td style="text-align:center;">&#9989;</td>
 <td style="text-align:center;">&#9989;</td>
@@ -996,41 +1092,25 @@ tr.zero-traffic { background: #fffbeb; }
 <td style="text-align:center;">&#9989;</td>
 <td style="text-align:center;">&#10060;</td>
 </tr>
-<tr><td class="kw-cell" title="https://tokuhealth.com/a/blog/reducing-heart-disease-risk"><a href="https://tokuhealth.com/a/blog/reducing-heart-disease-risk" target="_blank" style="color:var(--accent);text-decoration:none;">reducing-heart-disease-risk</a></td>
-<td style="text-align:center;">&#9989;</td>
-<td style="text-align:center;">&#9989;</td>
-<td style="text-align:center;">&#9989;</td>
-<td style="text-align:center;">&#10060;</td>
-</tr>
-<tr><td class="kw-cell" title="https://tokuhealth.com/a/blog/is-nattokinase-good-for-kidneys"><a href="https://tokuhealth.com/a/blog/is-nattokinase-good-for-kidneys" target="_blank" style="color:var(--accent);text-decoration:none;">is-nattokinase-good-for-kidneys</a></td>
-<td style="text-align:center;">&#9989;</td>
-<td style="text-align:center;">&#10060;</td>
-<td style="text-align:center;">&#9989;</td>
-<td style="text-align:center;">&#10060;</td>
-</tr>
 </tbody></table></div>
 <h3>Tasks You Can Do Now (DIY)</h3>
 <p class="subsection-intro">These tasks can be completed without a developer, using DropInBlog, Shopify admin, or simple file creation.</p>
-<div class="insight-card priority-high" style="border-left-color:var(--negative);"><span class="insight-badge" style="background:var(--negative);">HIGH</span><div class="insight-title">#1 &mdash; Missing BlogPosting schema</div><div class="insight-detail">Add BlogPosting schema markup to this page.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 3 pages</span></div></div>
-<div class="insight-card priority-high" style="border-left-color:var(--negative);"><span class="insight-badge" style="background:var(--negative);">HIGH</span><div class="insight-title">#2 &mdash; Missing H1 tag</div><div class="insight-detail">Ensure the article/page has exactly one H1 heading at the top.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 2 pages</span></div></div>
-<div class="insight-card priority-high" style="border-left-color:var(--negative);"><span class="insight-badge" style="background:var(--negative);">HIGH</span><div class="insight-title">#3 &mdash; Missing title tag</div><div class="insight-detail">Add a title tag in the DropInBlog or Shopify editor SEO fields.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 1 page</span></div></div>
-<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#4 &mdash; Missing Speakable schema (GEO optimization)</div><div class="insight-detail">The content engine generates Speakable schema via format_article_schema(). Ensure the schema JSON is included in the DropInBlog article HTML. Target selectors: .quick-answer, .key-finding, h1<br><span style="font-size:11px;color:var(--text-muted);">Affects: 50 pages</span></div></div>
-<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#5 &mdash; Missing quick-answer block (GEO optimization)</div><div class="insight-detail">Add a &lt;!-- quick-answer --&gt; block near the top of the article with a concise 2-3 sentence answer. This helps AI models extract a direct answer.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 50 pages</span></div></div>
-<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#6 &mdash; Missing FAQPage schema</div><div class="insight-detail">Add an FAQ section with schema to this article. The content engine generates FAQ schema automatically — ensure it's included in the article HTML.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 25 pages</span></div></div>
-<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#7 &mdash; Missing internal link to hub page (what-is-nattokinase)</div><div class="insight-detail">Add a contextual internal link to the hub page: https://tokuhealth.com/a/blog/what-is-nattokinase<br><span style="font-size:11px;color:var(--text-muted);">Affects: 13 pages</span></div></div>
-<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#8 &mdash; Stale content (13 months since last update)</div><div class="insight-detail">Refresh this article with updated data, new studies, and a current 'Last updated' date.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 5 pages</span></div></div>
-<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#9 &mdash; Missing meta description</div><div class="insight-detail">Add a meta description in the SEO fields. Target 120-170 characters with the primary keyword.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 2 pages</span></div></div>
-<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#10 &mdash; Stale content (15 months since last update)</div><div class="insight-detail">Refresh this article with updated data, new studies, and a current 'Last updated' date.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 1 page</span></div></div>
-<div class="insight-card priority-low" style="border-left-color:var(--positive);"><span class="insight-badge" style="background:var(--positive);">LOW</span><div class="insight-title">#11 &mdash; Header hierarchy issue: Multiple H1 tags (2)</div><div class="insight-detail">Fix header levels to follow a logical hierarchy (H1 → H2 → H3, no skipped levels).<br><span style="font-size:11px;color:var(--text-muted);">Affects: 9 pages</span></div></div>
-<div class="insight-card priority-low" style="border-left-color:var(--positive);"><span class="insight-badge" style="background:var(--positive);">LOW</span><div class="insight-title">#12 &mdash; Title length (85 chars) outside ideal range (30-70)</div><div class="insight-detail">Adjust the title tag to be between 30-70 characters. Current: 85 chars.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 3 pages</span></div></div>
-<div class="insight-card priority-low" style="border-left-color:var(--positive);"><span class="insight-badge" style="background:var(--positive);">LOW</span><div class="insight-title">#13 &mdash; Title length (72 chars) outside ideal range (30-70)</div><div class="insight-detail">Adjust the title tag to be between 30-70 characters. Current: 72 chars.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 2 pages</span></div></div>
-<div class="insight-card priority-low" style="border-left-color:var(--positive);"><span class="insight-badge" style="background:var(--positive);">LOW</span><div class="insight-title">#14 &mdash; Title length (80 chars) outside ideal range (30-70)</div><div class="insight-detail">Adjust the title tag to be between 30-70 characters. Current: 80 chars.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 2 pages</span></div></div>
-<div class="insight-card priority-low" style="border-left-color:var(--positive);"><span class="insight-badge" style="background:var(--positive);">LOW</span><div class="insight-title">#15 &mdash; Title length (105 chars) outside ideal range (30-70)</div><div class="insight-detail">Adjust the title tag to be between 30-70 characters. Current: 105 chars.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 2 pages</span></div></div>
-<h3>Tasks for Your Dev Team</h3>
-<p class="subsection-intro">These tasks require a developer to modify Shopify theme templates, server configuration, or CMS customization.</p>
-<div class="insight-card" style="border-left-color:#f97316;"><span class="insight-badge" style="background:#f97316;">DEV</span><div class="insight-title">#1 &mdash; Missing canonical tag</div><div class="insight-detail">Ensure the Shopify theme outputs a canonical URL tag. This should be handled by the theme's head section.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 1 page | Severity: high</span></div></div>
-<div class="insight-card" style="border-left-color:#f97316;"><span class="insight-badge" style="background:#f97316;">DEV</span><div class="insight-title">#2 &mdash; Missing BreadcrumbList schema</div><div class="insight-detail">Add BreadcrumbList JSON-LD to the Shopify theme layout. This requires editing the theme.liquid template to output breadcrumb structured data.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 1 page | Severity: medium</span></div></div>
-<div style="margin-top:20px; font-size:11px; color:var(--text-muted);">Audit date: 2026-08-07 (data from 2026-08-03 crawl &mdash; site was unreachable for a fresh audit) &bull; Collection time: 125s &bull; PSI pages sampled: 10</div>
+<div class="insight-card priority-high" style="border-left-color:var(--negative);"><span class="insight-badge" style="background:var(--negative);">HIGH</span><div class="insight-title">#1 &mdash; Missing H1 tag</div><div class="insight-detail">Ensure the article/page has exactly one H1 heading at the top.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 23 pages</span></div></div>
+<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#2 &mdash; Missing Speakable schema (GEO optimization)</div><div class="insight-detail">The content engine generates Speakable schema via format_article_schema(). Ensure the schema JSON is included in the DropInBlog article HTML. Target selectors: .quick-answer, .key-finding, h1<br><span style="font-size:11px;color:var(--text-muted);">Affects: 49 pages</span></div></div>
+<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#3 &mdash; Missing quick-answer block (GEO optimization)</div><div class="insight-detail">Add a &lt;!-- quick-answer --&gt; block near the top of the article with a concise 2-3 sentence answer. This helps AI models extract a direct answer.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 49 pages</span></div></div>
+<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#4 &mdash; Missing FAQPage schema</div><div class="insight-detail">Add an FAQ section with schema to this article. The content engine generates FAQ schema automatically — ensure it's included in the article HTML.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 22 pages</span></div></div>
+<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#5 &mdash; Missing internal link to hub page (what-is-nattokinase)</div><div class="insight-detail">Add a contextual internal link to the hub page: https://tokuhealth.com/a/blog/what-is-nattokinase<br><span style="font-size:11px;color:var(--text-muted);">Affects: 12 pages</span></div></div>
+<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#6 &mdash; Stale content (13 months since last update)</div><div class="insight-detail">Refresh this article with updated data, new studies, and a current 'Last updated' date.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 5 pages</span></div></div>
+<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#7 &mdash; Missing meta description</div><div class="insight-detail">Add a meta description in the SEO fields. Target 120-170 characters with the primary keyword.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 3 pages</span></div></div>
+<div class="insight-card priority-medium" style="border-left-color:#f59e0b;"><span class="insight-badge" style="background:#f59e0b;">MEDIUM</span><div class="insight-title">#8 &mdash; Stale content (15 months since last update)</div><div class="insight-detail">Refresh this article with updated data, new studies, and a current 'Last updated' date.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 1 page</span></div></div>
+<div class="insight-card priority-low" style="border-left-color:var(--positive);"><span class="insight-badge" style="background:var(--positive);">LOW</span><div class="insight-title">#9 &mdash; Meta description length (320 chars) outside ideal range (120-170)</div><div class="insight-detail">Adjust meta description to 120-170 characters. Current: 320 chars.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 14 pages</span></div></div>
+<div class="insight-card priority-low" style="border-left-color:var(--positive);"><span class="insight-badge" style="background:var(--positive);">LOW</span><div class="insight-title">#10 &mdash; Header hierarchy issue: Multiple H1 tags (2)</div><div class="insight-detail">Fix header levels to follow a logical hierarchy (H1 → H2 → H3, no skipped levels).<br><span style="font-size:11px;color:var(--text-muted);">Affects: 9 pages</span></div></div>
+<div class="insight-card priority-low" style="border-left-color:var(--positive);"><span class="insight-badge" style="background:var(--positive);">LOW</span><div class="insight-title">#11 &mdash; Header hierarchy issue: Multiple H1 tags (3); Skipped header level: H1 → H5</div><div class="insight-detail">Fix header levels to follow a logical hierarchy (H1 → H2 → H3, no skipped levels).<br><span style="font-size:11px;color:var(--text-muted);">Affects: 4 pages</span></div></div>
+<div class="insight-card priority-low" style="border-left-color:var(--positive);"><span class="insight-badge" style="background:var(--positive);">LOW</span><div class="insight-title">#12 &mdash; Title length (93 chars) outside ideal range (30-70)</div><div class="insight-detail">Adjust the title tag to be between 30-70 characters. Current: 93 chars.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 3 pages</span></div></div>
+<div class="insight-card priority-low" style="border-left-color:var(--positive);"><span class="insight-badge" style="background:var(--positive);">LOW</span><div class="insight-title">#13 &mdash; Title length (85 chars) outside ideal range (30-70)</div><div class="insight-detail">Adjust the title tag to be between 30-70 characters. Current: 85 chars.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 3 pages</span></div></div>
+<div class="insight-card priority-low" style="border-left-color:var(--positive);"><span class="insight-badge" style="background:var(--positive);">LOW</span><div class="insight-title">#14 &mdash; Title length (72 chars) outside ideal range (30-70)</div><div class="insight-detail">Adjust the title tag to be between 30-70 characters. Current: 72 chars.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 3 pages</span></div></div>
+<div class="insight-card priority-low" style="border-left-color:var(--positive);"><span class="insight-badge" style="background:var(--positive);">LOW</span><div class="insight-title">#15 &mdash; Title length (80 chars) outside ideal range (30-70)</div><div class="insight-detail">Adjust the title tag to be between 30-70 characters. Current: 80 chars.<br><span style="font-size:11px;color:var(--text-muted);">Affects: 2 pages</span></div></div>
+<div style="margin-top:20px; font-size:11px; color:var(--text-muted);">Audit date: 2026-08-07 &bull; Collection time: 158s &bull; PSI pages sampled: 10</div>
 </section>
 
 <section id="recommendations"><h2>Actions &amp; Recommendations</h2>
@@ -1046,11 +1126,9 @@ tr.zero-traffic { background: #fffbeb; }
 <div class="insight-card priority-medium"><span class="insight-badge">MEDIUM</span><div class="insight-title">AI engine gap: Chatgpt (4.2%) vs Gemini (0.4%)</div><div class="insight-detail">Toku appears significantly more in Chatgpt than Gemini. Investigate content formatting differences that each engine prefers for citation.</div></div>
 <div class="insight-card priority-medium"><span class="insight-badge">MEDIUM</span><div class="insight-title">Domain authority gap: DA 21 vs nearest competitor lumanutrition.com (DA 22)</div><div class="insight-detail">Toku has 56 linking root domains vs 442 for lumanutrition.com. See the Domain Trust Action Plan for specific link-building steps.</div></div>
 <div class="insight-card priority-low"><span class="insight-badge">LOW</span><div class="insight-title">Primary target &quot;nattokinase&quot; on target (position 4.6) ✓</div><div class="insight-detail">Ranking in the top 5. L30 impressions: 3,238. Maintain with fresh content updates and internal linking.</div></div>
-<div class="insight-card priority-medium"><span class="insight-badge">MEDIUM</span><div class="insight-title">Technical SEO grade is C (76/100) — room to improve</div><div class="insight-detail">Multiple technical areas need attention. Focus on high-severity DIY tasks first for quick wins.</div></div>
-<div class="insight-card priority-medium"><span class="insight-badge">MEDIUM</span><div class="insight-title">Schema &amp; Structured Data needs improvement (68/100)</div><div class="insight-detail">This category has 0 issues to address.</div></div>
-<div class="insight-card priority-medium"><span class="insight-badge">MEDIUM</span><div class="insight-title">Content Structure needs improvement (54/100)</div><div class="insight-detail">This category has 61 issues to address.</div></div>
-<div class="insight-card priority-medium"><span class="insight-badge">MEDIUM</span><div class="insight-title">Page Speed needs improvement (50/100)</div><div class="insight-detail">This category has 0 issues to address.</div></div>
-<div class="insight-card priority-medium"><span class="insight-badge">MEDIUM</span><div class="insight-title">3 high-priority DIY fixes available</div><div class="insight-detail">These are tasks you can do yourself without a developer. Check the Tech SEO action plan.</div></div>
+<div class="insight-card priority-high"><span class="insight-badge">HIGH</span><div class="insight-title">Content Structure score is critically low (46/100)</div><div class="insight-detail">This category has 87 issues. See the Tech SEO action plan for fixes.</div></div>
+<div class="insight-card priority-low"><span class="insight-badge">LOW</span><div class="insight-title">Page Speed: no measurement data — excluded from site score</div><div class="insight-detail">PageSpeed Insights API returned no data (rate-limited without an API key). Add a free GOOGLE_PSI_API_KEY secret to enable Core Web Vitals scoring.</div></div>
+<div class="insight-card priority-medium"><span class="insight-badge">MEDIUM</span><div class="insight-title">1 high-priority DIY fix available</div><div class="insight-detail">These are tasks you can do yourself without a developer. Check the Tech SEO action plan.</div></div>
 </div>
 <h3>Striking Distance Opportunities</h3>
 <p class="subsection-intro">Keywords where Toku ranks between positions 5&ndash;20 with 500+ impressions &mdash; close enough to reach page-one with targeted optimization. Opportunity Score is calculated from impression volume &times; position proximity, with a 2.5&times; boost for primary keywords. Data from Google Search Console, cross-referenced with blog article URLs.</p>
